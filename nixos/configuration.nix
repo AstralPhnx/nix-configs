@@ -15,8 +15,11 @@
   programs.hyprlock.enable = true;
   programs.waybar.enable = true;
   #Enable SDDM
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "catppuccin-sddm";
+    wayland.enable = true;
+  };
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
@@ -130,6 +133,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   kitty
+  catppuccin-sddm
   swaynotificationcenter
   mesa-demos  
   fastfetch
