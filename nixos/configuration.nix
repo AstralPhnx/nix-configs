@@ -17,7 +17,7 @@
   #Enable SDDM
   services.displayManager.sddm = {
     enable = true;
-    theme = "catppuccin-mocha";
+    theme = "catppuccin-sddm";
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
   };
@@ -134,12 +134,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   kitty
-  catppuccin-sddm.override {
-    flavor = "mocha";
-    font = "Noto Sans";
-    fontSize = "9";
-    loginBackground = true;
-  }
+  catppuccin-sddm
   swaynotificationcenter
   mesa-demos  
   fastfetch
