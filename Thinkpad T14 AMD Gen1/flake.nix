@@ -1,8 +1,14 @@
 {
+  description = "NixOS Config with flakes for personal ThinkPad T14 AMD Gen 1";
   inputs.nixpkgs.url = github:NixOS/nixpkgs/nixos-24.05;
-  outputs = { self, nixpkgs }: {
+  inputs.nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+  outputs = { self, nixpkgs, nixos-hardware }: {
     nixosConfigurations.astralthinkpad = nixpkgs.lib.nixosSystem {
-      modules = [ ./configuration.nix ];
+      modules = [
+        # ...
+        nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
+        ./configuration.nix
+      ];
     };
   };
 }
