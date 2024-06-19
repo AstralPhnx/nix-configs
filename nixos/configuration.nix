@@ -10,19 +10,24 @@
   zramSwap.memoryPercent = 200;
   boot.kernel.sysctl."vm.page-cluster" = 0;
   #NixOS Options Below
+  #Enable Hyprland and related
   programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
+  programs.waybar.enable = true;
+  #Enable SDDM
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+  #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
-  programs.hyprlock.enable = true;
+  #Enable Flatpak like the heathen I am
+  services.flatpak.enable = true;
+  #Uncategorized crap that I will deal with later
   programs.file-roller.enable = true;
   programs.adb.enable = true;
-  programs.waybar.enable = true;
   programs.command-not-found.enable = true;
   hardware.opengl.driSupport32Bit = true;
   programs.gamescope.enable = true;
-  services.flatpak.enable = true;
   #Enable btrfs autoscrubbing for volume health
   services.btrfs.autoScrub = {
     enable = true;
@@ -143,6 +148,7 @@
   curl
   #home-manager
   github-desktop
+  gh
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
