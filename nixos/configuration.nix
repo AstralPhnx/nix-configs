@@ -17,7 +17,7 @@
   #Enable SDDM
   services.displayManager.sddm = {
     enable = true;
-    theme = "catppuccin-sddm";
+    theme = "catppuccin";
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
   };
