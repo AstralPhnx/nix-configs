@@ -5,6 +5,10 @@
 { config, pkgs, ... }:
 
 {
+  #Enable ZRam because fuck swap partitions lol
+  zramSwap.enable = true;
+  zramSwap.memoryPercent = 200;
+  boot.kernel.sysctl."vm.page-cluster" = 0;
   #NixOS Options Below
   programs.hyprland.enable = true;
   services.displayManager.sddm.enable = true;
@@ -19,7 +23,13 @@
   hardware.opengl.driSupport32Bit = true;
   programs.gamescope.enable = true;
   services.flatpak.enable = true;
-  #services.btrfs.autoScrub.enable = true;
+  #Enable btrfs autoscrubbing for volume health
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "monthly";
+    fileSystems = [ "/" ];
+  };
+  #Flakes ON
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   imports =
