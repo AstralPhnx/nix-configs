@@ -14,6 +14,11 @@
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
   programs.waybar.enable = true;
+  #SwayFX Lol
+  programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  }
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
@@ -179,7 +184,7 @@
   #home-manager
   github-desktop
   gh
-  swayfx-unwrapped
+  #swayfx-unwrapped
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
