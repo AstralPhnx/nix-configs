@@ -32,6 +32,12 @@
   programs.command-not-found.enable = true;
   hardware.opengl.driSupport32Bit = true;
   programs.gamescope.enable = true;
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = lib.mkForce [
+    pkgs.xdg-desktop-portal-gtk # For both
+    pkgs.xdg-desktop-portal-hyprland # For Hyprland
+    pkgs.xdg-desktop-portal-gnome # For GNOME
+  ];
   #Enable btrfs autoscrubbing for volume health
   services.btrfs.autoScrub = {
     enable = true;
@@ -203,7 +209,7 @@
   #swayfx-unwrapped
   font-awesome
   nerdfonts
-  xdg-desktop-portal-gtk
+  #xdg-desktop-portal-gtk
   qadwaitadecorations-qt6
   qadwaitadecorations
   adw-gtk3
