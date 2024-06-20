@@ -21,7 +21,6 @@
   };
   #Gaming
   programs.steam.enable = true;
-
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
@@ -169,7 +168,7 @@
     prismlauncher-unwrapped
     lutris-unwrapped
     waycheck
-    
+
     ];
   };
 
