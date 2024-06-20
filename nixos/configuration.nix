@@ -19,6 +19,9 @@
     enable = true;
     package = pkgs.swayfx;
   };
+  #Gaming
+  programs.steam.enable = true;
+
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
@@ -151,7 +154,22 @@
     description = "AstralPhnx";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+    armcord
+    pinta
+    thunderbird
+    libreoffice-qt6-still
+    onlyoffice-bin
+    clapper
+    spotify
+    mission-center
+    lollypop
+    protonplus
+    protonup-qt
+    protontricks
+    prismlauncher-unwrapped
+    lutris-unwrapped
+    waycheck
+    
     ];
   };
 
