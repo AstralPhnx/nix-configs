@@ -18,7 +18,7 @@
   programs.sway = {
     enable = true;
     package = pkgs.swayfx;
-  }
+  };
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
