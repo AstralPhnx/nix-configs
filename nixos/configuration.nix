@@ -15,12 +15,14 @@
   programs.hyprlock.enable = true;
   programs.waybar.enable = true;
   #Enable SDDM
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "catppuccin";
-    wayland.enable = true;
-    package = pkgs.kdePackages.sddm;
-  };
+  #services.displayManager.sddm = {
+  #  enable = true;
+  #  theme = "catppuccin";
+  #  wayland.enable = true;
+  #  package = pkgs.kdePackages.sddm;
+  #};
+  #LightDM time actually
+  services.xserver.displayManager.lightdm.enable = true;
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
