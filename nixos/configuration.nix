@@ -204,6 +204,12 @@
   font-awesome
   nerdfonts
   xdg-desktop-portal-gtk
+  qadwaitadecorations-qt6
+  qadwaitadecorations
+  adw-gtk3
+  adwaita-qt
+  adwaita-qt6
+  
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
