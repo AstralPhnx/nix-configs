@@ -34,7 +34,7 @@
   programs.gamescope.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [
-    #pkgs.xdg-desktop-portal-gtk # For both
+    pkgs.xdg-desktop-portal-gtk # For both
     pkgs.xdg-desktop-portal-hyprland # For Hyprland
     pkgs.xdg-desktop-portal-gnome # For GNOME
   ];
