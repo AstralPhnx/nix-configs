@@ -14,15 +14,6 @@
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
   programs.waybar.enable = true;
-  #Enable SDDM
-  #services.displayManager.sddm = {
-  #  enable = true;
-  #  theme = "catppuccin";
-  #  wayland.enable = true;
-  #  package = pkgs.kdePackages.sddm;
-  #};
-  #LightDM time actually
-  #services.xserver.displayManager.lightdm.enable = true;
   #Git Stuff
   programs.git.enable = true;
   programs.lazygit.enable = true;
@@ -169,7 +160,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   kitty
-  catppuccin-sddm
   swaynotificationcenter
   mesa-demos  
   fastfetch
@@ -189,6 +179,7 @@
   #home-manager
   github-desktop
   gh
+  swayfx-unwrapped
 
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
