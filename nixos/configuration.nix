@@ -40,6 +40,39 @@
   };
   #Flakes ON
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  #Shell Aliases Below
+  programs.bash.shellAliases = {
+    #Fuck it we ball update ALL THE THINGS DAMNIT.  
+    nixos-ball = "nix flake update && sudo nixos-rebuild --flake ~/.config/nix/nixos switch && flatpak update";
+    #ABORT ABORT MISTAKES WERE MADE
+    nixos-fuckgoback = "sudo nixos-rebuild --rollback switch";
+    #We can Rebuild him
+    nixos-robocop = "sudo nixos-rebuild --flake ~/.config/nix/nixos switch";
+  };
+  #Enable Plymouth for the nice bootup
+  boot.plymouth = {
+    enable = true;
+    theme = "black_hud";
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override) {
+        selected_themes = [ "black_hud" ];
+      })
+    ];
+  };
+
+  boot = {
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
+    ];
+  };
 
   imports =
     [ # Include the results of the hardware scan.
