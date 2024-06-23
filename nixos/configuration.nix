@@ -160,7 +160,6 @@
     description = "AstralPhnx";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    armcord
     pinta
     thunderbird
     libreoffice-qt6-still
