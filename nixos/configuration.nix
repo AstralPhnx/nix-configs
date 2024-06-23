@@ -33,6 +33,7 @@
   hardware.opengl.driSupport32Bit = true;
   programs.gamescope.enable = true;
   xdg.portal.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   xdg.portal.extraPortals = [
     #pkgs.xdg-desktop-portal-gtk # For both
     pkgs.xdg-desktop-portal-hyprland # For Hyprland
