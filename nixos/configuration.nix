@@ -50,11 +50,11 @@
   #Shell Aliases Below
   programs.bash.shellAliases = {
     #Fuck it we ball update ALL THE THINGS DAMNIT.  
-    nixos-ball = "cd ~/.config/nix/nixos && nix flake update && sudo nixos-rebuild --flake ~/.config/nix/nixos switch && flatpak update";
+    nixos-ball = "nix flake update ~/.config/nix/nixos && sudo nixos-rebuild switch --flake ~/.config/nix/nixos && flatpak update";
     #ABORT ABORT MISTAKES WERE MADE
     nixos-fuckgoback = "sudo nixos-rebuild --rollback switch";
     #We can Rebuild him
-    nixos-robocop = "sudo nixos-rebuild --flake ~/.config/nix/nixos switch";
+    nixos-robocop = "sudo nixos-rebuild switch --flake ~/.config/nix/nixos";
   };
   #Enable Plymouth for the nice bootup
   boot.plymouth = {
