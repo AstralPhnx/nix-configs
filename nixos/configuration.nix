@@ -50,7 +50,7 @@
   #Shell Aliases Below
   programs.bash.shellAliases = {
     #Fuck it we ball update ALL THE THINGS DAMNIT.  
-    nixos-ball = "nix flake update && sudo nixos-rebuild --flake ~/.config/nix/nixos switch && flatpak update";
+    nixos-ball = "nix flake update --flake ~/.config/nix/nixos && sudo nixos-rebuild --flake ~/.config/nix/nixos switch && flatpak update";
     #ABORT ABORT MISTAKES WERE MADE
     nixos-fuckgoback = "sudo nixos-rebuild --rollback switch";
     #We can Rebuild him
