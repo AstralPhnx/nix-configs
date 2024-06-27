@@ -216,6 +216,11 @@
   adwaita-qt6
   gnome.dconf-editor
   gnomeExtensions.ddterm
+  hyprlandPlugins.hyprexpo
+  hyprlandPlugins.hyprbars
+  hyprlandPlugins.hyprwinwrap
+  hyprlandPlugins.borders-plus-plus
+  
   
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
