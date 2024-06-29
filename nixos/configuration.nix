@@ -174,6 +174,7 @@
     prismlauncher-unwrapped
     lutris-unwrapped
     waycheck
+    frozen-bubble
     ];
   };
 
