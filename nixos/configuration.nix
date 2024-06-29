@@ -221,7 +221,18 @@
   hyprlandPlugins.hyprbars
   hyprlandPlugins.hyprwinwrap
   hyprlandPlugins.borders-plus-plus
-  
+  gnomeExtensions.runcat
+  gnomeExtensions.quick-settings-tweaker
+  gnomeExtensions.notification-counter
+  gnomeExtensions.just-perfection
+  gnomeExtensions.gsconnect
+  gnomeExtensions.grand-theft-focus
+  gnomeExtensions.do-not-disturb-while-screen-sharing-or-recording
+  gnomeExtensions.compiz-windows-effect
+  gnomeExtensions.compiz-alike-magic-lamp-effect
+  gnomeExtensions.blur-my-shell
+  gnomeExtensions.alphabetical-app-grid
+
   
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
